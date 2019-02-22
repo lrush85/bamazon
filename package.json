@@ -1,0 +1,25 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "Bamazon App - Clone Node verson of Amazon",
+  "main": "bamazonCustomer.js",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "inquirer": "^6.2.2",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lrush85/bamazon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lrush85/bamazon/issues"
+  },
+  "homepage": "https://github.com/lrush85/bamazon#readme"
+}
