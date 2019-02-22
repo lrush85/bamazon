@@ -12,25 +12,25 @@ This app uses Node.js and mySQL as the database.
 
 ### SQL Database
 ---
-img here
+![alt text](./images/sql-db.jpg)
 
 ## Intro: Bamazon App 📫️
 ---
 When you sart the app it will display two choices for the user to select.
 
-img here
+![alt text](./images/bamazon-start.jpg)
 
 ## Product List 🛒
 ___
 When user selects the "purchase product" choice it will display all the current products in the store and it's respective details.
 
-img here
+![alt text](./images/purchase-item.jpg)
 
 ## In Stock 😁
 ---
 When the item is in-stock and the user decides to purchase it.  A thank you message is displayed and the stock is depleted. 
 
-img here
+![alt text](./images/another-purchase.jpg)
 
 ## Out of Stock 🙁
 ---
@@ -41,5 +41,5 @@ img here
 ## End Shopping 🛍️
 Another option the user has is to end the shopping experience after they have chosen to purchase an item.
 
-img here
+![alt text](./images/end-purchase.jpg)
 
