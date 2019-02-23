@@ -70,11 +70,13 @@ function purchaseProducts () {
             var result;
             for(var i = 0; i < res.length; i ++) {
                 result = res[i];
-            
+                var total = itemAmount * parseFloat(result.price);
                 if (choice == result.item_id) {
-                    console.log("Item choosen: " + result.product_name);
-                    console.log("Purchase placed!  You have spent $" + (itemAmount * parseFloat(result.price)) + " today");
-                    anotherPurchase();
+
+                    console.log("Item choosen: " + result.product_name) + ".";
+                    console.log("Purchase placed!  Your total purchased price is $" + total.toFixed() + ".");
+                    console.log(`You now have ${result.stock_quantity} of ${result.product_name}.`);
+                
                 
                 connection.query(
                     "UPDATE products SET ? WHERE ? ",
@@ -89,12 +91,15 @@ function purchaseProducts () {
                     function(err) {
                         if(err) throw err;
                     });   
+                    if (result.stock_quantity <= 0) {
+                        console.log("Insufficent amount, please choose another item.");
+                        purchaseProducts();
+                    }   else {
+                        anotherPurchase();
+                    }   
+                }    
+            }        
                    
-                } else if (result.stock_quantity <= 2) {
-                    console("Insufficent amount, please choose another item");
-                    purchaseProducts();
-                }        
-            }                  
         });    
     });
 }
